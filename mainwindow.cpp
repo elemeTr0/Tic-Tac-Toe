@@ -121,9 +121,11 @@ void MainWindow::onCellClicked()
     if (label) {
         if (turn) {
             label->setText("X");
+            ui->winner->setText("O Turn");
             label->setStyleSheet("color: red; border: none; font-size:30px; qproperty-alignment: AlignCenter;"); //Red Style
         } else {
             label->setText("O");
+            ui->winner->setText("X Turn");
             label->setStyleSheet("color: blue; border: none; font-size:30px; qproperty-alignment: AlignCenter;"); //Blue Style
         }
         clickedWidget->setEnabled(false);
